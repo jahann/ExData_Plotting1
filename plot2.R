@@ -1,5 +1,7 @@
 # read the data
-d <- read.table("C:\\tmp\\coursera\\ExploratoryDataAnalysis\\household_power_consumption.txt",header=TRUE,sep=";",na.strings="?")
+file = args <- commandArgs(trailingOnly = TRUE)[1]
+
+d <- read.table(file,header=TRUE,sep=";",na.strings="?")
 
 # subset the data
 sub <- subset(d,Date == '1/2/2007' | Date == '2/2/2007')
